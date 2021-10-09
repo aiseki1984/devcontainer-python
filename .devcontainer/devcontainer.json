@@ -1,0 +1,21 @@
+{
+  "name": "Python",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  // "forwardPorts": [8000],
+  "workspaceFolder": "/var/www/html",
+  "extensions": [
+    "mikestead.dotenv",
+    "bmewburn.vscode-intelephense-client",
+    "ms-python.python",
+    "atisteo.vscode-django",
+    "bibhasdn.django-snippets",
+    "bibhasdn.django-html",
+    "editorconfig.editorconfig",
+    "donjayamanne.githistory",
+    "eamodio.gitlens"
+  ],
+  "settings": {
+    "editor.tabSize": 2
+  }
+}
