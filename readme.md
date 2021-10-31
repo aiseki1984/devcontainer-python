@@ -1,6 +1,9 @@
-# laravel project
+# Python Devcontainer
 
-https://qiita.com/sano1202/items/6021856b70e4f8d3dc3d
+- python
+- mysql
+- phpmyadmin
+- mailhog
 
 ## vscode remote container で ssh で git push
 
