@@ -10,9 +10,9 @@ services:
       - "8000:8000"
     stdin_open: true
     tty: true
-    working_dir: "/var/www/html"
+    working_dir: "/workspace"
     volumes:
-      - ../:/var/www/html
+      - ../:/workspace
     depends_on:
       - db
 
@@ -32,8 +32,8 @@ services:
       - TZ="Asia/Tokyo"
     volumes:
       - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
-      - ../db/database:/var/lib/mysql
-      - ../db/init:/docker-entrypoint-initdb.d
+      - ./db/database:/var/lib/mysql
+      - ./db/init:/docker-entrypoint-initdb.d
 
   phpmyadmin:
     container_name: phpmyadmin

@@ -3,7 +3,7 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
   // "forwardPorts": [8000],
-  "workspaceFolder": "/var/www/html",
+  "workspaceFolder": "/workspace",
   "extensions": [
     "mikestead.dotenv",
     "bmewburn.vscode-intelephense-client",

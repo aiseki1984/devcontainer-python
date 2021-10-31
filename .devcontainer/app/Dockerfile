@@ -4,7 +4,7 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update \
     && apt-get install -y zlib1g-dev libzip-dev libpq-dev mariadb-client tzdata zip unzip git
 
-WORKDIR /var/www/html
+WORKDIR /workspace
 
-ADD requirements.txt /var/www/html
+ADD requirements.txt /workspace
 RUN pip install -r requirements.txt
