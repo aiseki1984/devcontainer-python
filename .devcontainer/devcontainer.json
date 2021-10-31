@@ -5,6 +5,7 @@
   // "forwardPorts": [8000],
   "workspaceFolder": "/workspace",
   "extensions": [
+    "esbenp.prettier-vscode",
     "mikestead.dotenv",
     "bmewburn.vscode-intelephense-client",
     "ms-python.python",
