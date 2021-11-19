@@ -2,9 +2,9 @@ version: "3.8"
 
 services:
   app:
-    image: my_python/app:1.0
+    # image: my_python/app:1.0
     build: ./app
-    container_name: "my_python_app"
+    # container_name: "my_python_app"
     ports:
       - "8080:80"
       - "8000:8000"
@@ -17,9 +17,9 @@ services:
       - db
 
   db:
-    image: my_python/mysql:1.0
+    # image: my_python/mysql:1.0
     build: ./db
-    container_name: "my_python_db"
+    # container_name: "my_python_db"
     expose:
       - "3306"
     ports:
@@ -36,7 +36,7 @@ services:
       - ./db/init:/docker-entrypoint-initdb.d
 
   phpmyadmin:
-    container_name: phpmyadmin
+    # container_name: phpmyadmin
     image: phpmyadmin/phpmyadmin
     environment:
       - PMA_ARBITRARY=1
