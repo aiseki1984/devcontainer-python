@@ -1,22 +1,19 @@
 {
-  // IntelliSense を使用して利用可能な属性を学べます。
-  // 既存の属性の説明をホバーして表示します。
-  // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
-  "version": "0.2.0",
   "configurations": [
     {
-      "name": "Listen for XDebug",
-      "type": "php",
-      "request": "launch",
-      "port": 9003
-    },
-    {
-      "name": "Launch currently open script",
-      "type": "php",
+      "name": "Python: Current File",
+      "type": "python",
       "request": "launch",
       "program": "${file}",
-      "cwd": "${fileDirname}",
-      "port": 9003
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Python: FastAPI",
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["api.main:app", "--reload", "--host", "0"],
+      "cwd": "${workspaceFolder}/app/"
     }
   ]
 }

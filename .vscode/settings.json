@@ -5,7 +5,8 @@
     "source.fixAll.eslint": true
   },
   "[python]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.tabSize": 4
   },
   "[css]": {
     "editor.formatOnSave": false
