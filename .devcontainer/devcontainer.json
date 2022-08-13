@@ -1,6 +1,6 @@
 {
   "name": "Python",
-  "dockerComposeFile": "docker-compose.yml",
+  "dockerComposeFile": "../docker-compose.yml",
   "service": "app",
   // "forwardPorts": [8000],
   "workspaceFolder": "/workspace",
@@ -9,6 +9,7 @@
     "mikestead.dotenv",
     "bmewburn.vscode-intelephense-client",
     "ms-python.python",
+    "ms-python.pylint",
     "atisteo.vscode-django",
     "bibhasdn.django-snippets",
     "bibhasdn.django-html",

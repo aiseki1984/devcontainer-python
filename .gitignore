@@ -1,5 +1,5 @@
 ./app/
-.devcontainer/db/database
+.docker/db/database
 
 # /postgres/database
 # /postgres/initdb

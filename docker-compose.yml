@@ -2,9 +2,9 @@ version: "3.8"
 
 services:
   app:
-    # image: my_python/app:1.0
-    build: ./app
-    # container_name: "my_python_app"
+    build: ./.docker/app
+    image: my_python/app:1.0
+    container_name: "my_python_app"
     ports:
       - "8080:80"
       - "8000:8000"
@@ -12,14 +12,14 @@ services:
     tty: true
     working_dir: "/workspace"
     volumes:
-      - ../:/workspace
+      - ./:/workspace
     depends_on:
       - db
 
   db:
-    # image: my_python/mysql:1.0
-    build: ./db
-    # container_name: "my_python_db"
+    build: ./.docker/db
+    image: my_python/mysql:1.0
+    container_name: 'my_python_db'
     expose:
       - "3306"
     ports:
@@ -31,13 +31,13 @@ services:
       - MYSQL_PASSWORD=test
       - TZ="Asia/Tokyo"
     volumes:
-      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
-      - ./db/database:/var/lib/mysql
-      - ./db/init:/docker-entrypoint-initdb.d
+      - ./.docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./.docker/db/database:/var/lib/mysql
+      - ./.docker/db/init:/docker-entrypoint-initdb.d
 
   phpmyadmin:
-    # container_name: phpmyadmin
-    image: phpmyadmin/phpmyadmin
+    container_name: 'my_python_phpmyadmin'
+    image: phpmyadmin:latest
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=db
@@ -49,6 +49,7 @@ services:
       - 8081:80
 
   mailhog:
+    container_name: 'my_python_mailhog'
     image: mailhog/mailhog
     ports:
       - "8025:8025"

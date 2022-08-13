@@ -1,11 +1,15 @@
 {
+  "workbench.colorTheme": "Default Dark+",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": true,
     "source.fixAll.eslint": true
   },
+  "[markdown]": {
+    "editor.formatOnSave": true,
+  },
   "[python]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.tabSize": 4
   },
   "[css]": {
@@ -17,5 +21,14 @@
   "[javascript]": {
     "editor.formatOnSave": false
   },
-  "stylelint.validate": ["css", "html", "scss"]
+  "[jinja-html]": {
+    "editor.formatOnSave": false
+  },
+  "[django-html]": {
+    "editor.formatOnSave": false
+  },
+  "stylelint.validate": ["css", "html", "scss"],
+  "emmet.includeLanguages": {
+    "jinja-html": "html"
+  }
 }
