@@ -4,20 +4,24 @@
   "service": "app",
   // "forwardPorts": [8000],
   "workspaceFolder": "/workspace",
-  "extensions": [
-    "esbenp.prettier-vscode",
-    "mikestead.dotenv",
-    "bmewburn.vscode-intelephense-client",
-    "ms-python.python",
-    "ms-python.pylint",
-    "atisteo.vscode-django",
-    "bibhasdn.django-snippets",
-    "bibhasdn.django-html",
-    "editorconfig.editorconfig",
-    "donjayamanne.githistory",
-    "eamodio.gitlens"
-  ],
-  "settings": {
-    "editor.tabSize": 2
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "mikestead.dotenv",
+        "bmewburn.vscode-intelephense-client",
+        "ms-python.python",
+        "ms-python.pylint",
+        "atisteo.vscode-django",
+        "bibhasdn.django-snippets",
+        "bibhasdn.django-html",
+        "editorconfig.editorconfig",
+        "donjayamanne.githistory",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "editor.tabSize": 2
+      }
+    }
   }
 }
