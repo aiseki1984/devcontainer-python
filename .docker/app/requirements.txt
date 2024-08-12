@@ -9,6 +9,7 @@ attrs==24.2.0
 babel==2.16.0
 bcrypt==4.2.0
 beautifulsoup4==4.12.3
+black==24.8.0
 bleach==6.1.0
 certifi==2024.7.4
 cffi==1.17.0
@@ -31,6 +32,7 @@ idna==3.7
 ipykernel==6.29.5
 ipython==8.26.0
 isoduration==20.11.0
+isort==5.13.2
 jedi==0.19.1
 Jinja2==3.1.4
 json5==0.9.25
@@ -49,6 +51,7 @@ jupyterlab_server==2.27.3
 MarkupSafe==2.1.5
 matplotlib-inline==0.1.7
 mistune==3.0.2
+mypy-extensions==1.0.0
 mysqlclient==2.2.4
 nbclient==0.10.0
 nbconvert==7.16.4
@@ -60,6 +63,7 @@ packaging==24.1
 pandocfilters==1.5.1
 parso==0.8.4
 passlib==1.7.4
+pathspec==0.12.1
 pexpect==4.9.0
 platformdirs==4.2.2
 prometheus_client==0.20.0

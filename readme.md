@@ -16,6 +16,14 @@ $ pip install -r requirements.txt
 $ pip freeze > requirements.txt
 ```
 
+# formatter
+
+https://dev.classmethod.jp/articles/vscode-workspace-python-format/
+
+```shell
+$ pip install black isort
+```
+
 # find でのディレクトリの削除
 
 https://qiita.com/mtakahashi-ivi/items/a678b6514674350c05a3
@@ -49,6 +57,16 @@ https://qiita.com/Masaaki_Inaba/items/fe4a246a7e6fcd9c4726
 # 例えばuvicornがあるか確認したいとき
 $ pip freeze | grep "uvicorn"
 uvicorn==0.15.0
+```
+
+## fastapi uvicorn
+
+```shell
+$ uvicorn blog.main:app --host 0 --reload
+$ uvicorn app.api.main:app --host 0 --reload
+$ uvicorn main:app --reload --port 8000 --host 0
+#--host 0 は、--host 0.0.0.0 の省略形
+http://localhost:8000/docs
 ```
 
 ## jupyter lab

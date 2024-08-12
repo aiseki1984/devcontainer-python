@@ -7,6 +7,9 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "humao.rest-client",
+        "ms-python.black-formatter",
+        "ms-python.isort",
         "esbenp.prettier-vscode",
         "mikestead.dotenv",
         "bmewburn.vscode-intelephense-client",

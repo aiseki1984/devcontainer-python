@@ -5,10 +5,18 @@
     "source.fixAll.stylelint": "explicit",
     "source.fixAll.eslint": "explicit"
   },
+  // "python.defaultInterpreterPath": "/usr/local/bin/python",
   "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "editor.tabSize": 4
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
   },
+  "isort.args": ["--profile", "black"],
   "[css]": {
     "editor.formatOnSave": false
   },
