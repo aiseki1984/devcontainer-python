@@ -2,24 +2,26 @@ version: "3.8"
 
 services:
   app:
+    # image: my_python/app:1.0
     build: ./.docker/app
-    image: my_python/app:1.0
-    container_name: "my_python_app"
+    # container_name: "my_python_app"
     ports:
       - "8080:80"
       - "8000:8000"
+      - "8888:8888"
     stdin_open: true
     tty: true
     working_dir: "/workspace"
     volumes:
       - ./:/workspace
     depends_on:
-      - db
+      - mysql
+      - mail
 
-  db:
-    build: ./.docker/db
-    image: my_python/mysql:1.0
-    container_name: 'my_python_db'
+  mysql:
+    # image: my_python/mysql:1.0
+    build: ./.docker/mysql
+    # container_name: 'my_python_db'
     expose:
       - "3306"
     ports:
@@ -31,25 +33,26 @@ services:
       - MYSQL_PASSWORD=test
       - TZ="Asia/Tokyo"
     volumes:
-      - ./.docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
-      - ./.docker/db/database:/var/lib/mysql
-      - ./.docker/db/init:/docker-entrypoint-initdb.d
+      - ./.docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./.docker/mysql/_database:/var/lib/mysql
+      - ./.docker/mysql/init:/docker-entrypoint-initdb.d
 
   phpmyadmin:
-    container_name: 'my_python_phpmyadmin'
+    # container_name: phpmyadmin
     image: phpmyadmin:latest
     environment:
       - PMA_ARBITRARY=1
-      - PMA_HOST=db
+      - PMA_HOST=mysql
       - PMA_USER=root
       - PMA_PASSWORD=root
     links:
-      - db
+      - mysql
     ports:
       - 8081:80
 
-  mailhog:
-    container_name: 'my_python_mailhog'
-    image: mailhog/mailhog
+  mail:
+    image: axllent/mailpit:v1.8
+    container_name: mailpit
     ports:
-      - "8025:8025"
+      - 8025:8025
+      - 1025:1025

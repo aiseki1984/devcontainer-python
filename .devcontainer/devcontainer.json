@@ -11,7 +11,6 @@
         "mikestead.dotenv",
         "bmewburn.vscode-intelephense-client",
         "ms-python.python",
-        "ms-python.pylint",
         "atisteo.vscode-django",
         "bibhasdn.django-snippets",
         "bibhasdn.django-html",
@@ -20,7 +19,7 @@
         "eamodio.gitlens"
       ],
       "settings": {
-        "editor.tabSize": 2
+        "editor.tabSize": 4
       }
     }
   }

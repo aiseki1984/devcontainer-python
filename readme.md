@@ -3,7 +3,7 @@
 - python
 - mysql
 - phpmyadmin
-- mailhog
+- mailpit
 
 # venv
 
@@ -51,10 +51,10 @@ $ pip freeze | grep "uvicorn"
 uvicorn==0.15.0
 ```
 
-## mysqclient のインストール
+## jupyter lab
 
 ```shell
-$ pip install mysqlclient
+$ jupyter lab --no-browser --allow-root --port=8888 --ip=0.0.0.0
 ```
 
 ## vscode remote container で ssh で git push

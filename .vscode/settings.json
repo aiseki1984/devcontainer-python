@@ -2,11 +2,8 @@
   "workbench.colorTheme": "Default Dark+",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true,
-    "source.fixAll.eslint": true
-  },
-  "[markdown]": {
-    "editor.formatOnSave": true,
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "[python]": {
     "editor.formatOnSave": true,

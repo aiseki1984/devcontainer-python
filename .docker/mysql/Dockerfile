@@ -1,4 +1,4 @@
-FROM mysql:8.0.29-oracle
+FROM mysql:8.4.2
 
 COPY ./my.cnf /etc/mysql/conf.d/my.cnf
 
