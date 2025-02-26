@@ -1,5 +1,7 @@
 ./app/
 .docker/mysql/_database
+.docker/postgres/_database
+.docker/pgadmin4/_pgadmin-data
 
 # /postgres/database
 # /postgres/initdb

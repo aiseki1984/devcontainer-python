@@ -4,6 +4,27 @@
 - mysql
 - phpmyadmin
 - mailpit
+- postgres
+- pgadmin
+
+## postgres + pgadmin
+
+```shell
+docker compose exec postgres bash
+psql -U user -d sample
+
+docker exec -it $(docker ps -q -f name=devcontainer-python-postgres-1) psql -U user -d sample
+
+# show dbs
+\l
+# show tables
+\d
+SELECT * FROM books;
+```
+
+### 参考
+
+- [PostgreSQL と PgAdmin4 を Docker Compose で立ち上げる](https://zenn.dev/onozaty/articles/postgresql-pgadmin-container)
 
 # venv
 
